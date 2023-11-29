@@ -80,7 +80,7 @@ const getProduct = async (req, res) => {
         if (products) {
             return res.status(200).json({ 'items': products, 'categoryName': categoryName })
         } else {
-            return res.status(500).json('Server error')
+            return res.status(404).json('No products')
         }
     }
     catch (err) {
